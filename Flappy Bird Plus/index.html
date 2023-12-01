@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Flappy Bird Plus</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="gamelab-api.js"></script>
+    <link href="gamelab.css" rel="stylesheet" type="text/css">
+    <script src="p5.js"></script>
+    <script src="p5.play.js"></script>
+    <script src="code.js"></script>
+    <style>
+      body.expo {
+        background-color: black;
+      }
+      #sketch.expo.no-controls {
+        top: 82px;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        background-color: #5bee5b;
+      }
+      #sketch {
+        position: relative;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+      }
+      .refresh-button {
+        font-size: 20px;
+        padding: 10px 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .refresh-button:hover {
+      background-color: #45a049;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body class="web">
+    <div id="sketch" class="web"></div>
+    <button class="refresh-button" onclick="location.reload();">Refresh Game</button>
+    <div id="soft-buttons" style="display: none">
+      <button id="leftButton" disabled className="arrow"></button>
+      <button id="rightButton" disabled className="arrow"></button>
+      <button id="upButton" disabled className="arrow"></button>
+      <button id="downButton" disabled className="arrow"></button>
+    </div>
+    <div id="studio-dpad-container" style="display: none;"></div>
+  </body>
+</html>
